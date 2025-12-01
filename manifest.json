@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Pranke Extension Scraper",
+  "version": "1.0.0",
+  "description": "Scrapes Pranke Trading Partner directory search results",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://wss.pranke.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://wss.pranke.com/PrankeWebExtensions/*/TnrSearch/TnrSearch*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["keywords.txt"],
+      "matches": ["https://wss.pranke.com/*"]
+    }
+  ]
+}
+

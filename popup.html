@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+    #status {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    .status-info {
+      background-color: #e3f2fd;
+      color: #1976d2;
+    }
+    .status-success {
+      background-color: #e8f5e9;
+      color: #2e7d32;
+    }
+    .status-error {
+      background-color: #ffebee;
+      color: #c62828;
+    }
+  </style>
+</head>
+<body>
+  <h3>Pranke Scraper</h3>
+  <button id="startBtn">Start Scraping</button>
+  <div id="status"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
+
